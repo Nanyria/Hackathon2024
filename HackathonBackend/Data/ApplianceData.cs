@@ -6,7 +6,7 @@ namespace HackathonBackend.Data
     public static class ApplianceData
     {
         public static List<Appliance> GetAppliances()
-        {
+        { //hi
             return new List<Appliance>
             {
                 new Appliance { ApplianceId = 1, Name = "Microwave" },
