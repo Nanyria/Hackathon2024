@@ -1,35 +1,26 @@
-﻿namespace HackathonBackend.Models
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace HackathonBackend.Models
 {
-
-    using System;
-
-    public class UserInfo
+    public class User
     {
+        [Key]
         public int Id { get; set; }
-        public int ResourceId { get; set; }
-        public DateTime AtDateTime { get; set; }
-        public double ActiveEnergyOutlet { get; set; }
-        public double ActiveEffectOutlet { get; set; }
-        public double ActiveEnergyInput { get; set; }
-        public double ActiveEffectInput { get; set; }
-        public double PhaseCurrent1 { get; set; }
-        public double PhaseCurrent2 { get; set; }
-        public double PhaseCurrent3 { get; set; }
+        public int UserId { get; set; } 
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Address { get; set; }
+        [Required]
+        [Phone]
+        public string PhoneNumber { get; set; }
 
-        //public EnergyData(int id, int resourceId, DateTime atDateTime, double activeEnergyOutlet, double activeEffectOutlet,
-        //                  double activeEnergyInput, double activeEffectInput, double phaseCurrent1,
-        //                  double phaseCurrent2, double phaseCurrent3)
-        //{
-        //    Id = id;
-        //    ResourceId = resourceId;
-        //    AtDateTime = atDateTime;
-        //    ActiveEnergyOutlet = activeEnergyOutlet;
-        //    ActiveEffectOutlet = activeEffectOutlet;
-        //    ActiveEnergyInput = activeEnergyInput;
-        //    ActiveEffectInput = activeEffectInput;
-        //    PhaseCurrent1 = phaseCurrent1;
-        //    PhaseCurrent2 = phaseCurrent2;
-        //    PhaseCurrent3 = phaseCurrent3;
-        //}
+        // List of checks, renamed to 'EnergyAssessments' for clarity
+        public List<EnergyCheck> EnergyCheck { get; set; } = new List<EnergyCheck>();
+
+        // List of EnergyProfiles associated with this user
+        public List<EnergyProfile> EnergyProfiles { get; set; } = new List<EnergyProfile>();
     }
 }
