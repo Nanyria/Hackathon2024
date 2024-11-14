@@ -1,9 +1,9 @@
 ﻿namespace HackathonBackend.Models
 {
-  
-using System;
 
-public class UserInfo
+    using System;
+
+    public class UserInfo
     {
         public int Id { get; set; }
         public int ResourceId { get; set; }
@@ -16,19 +16,20 @@ public class UserInfo
         public double PhaseCurrent2 { get; set; }
         public double PhaseCurrent3 { get; set; }
 
-        public EnergyData(int id, int resourceId, DateTime atDateTime, double activeEnergyOutlet, double activeEffectOutlet,
-                          double activeEnergyInput, double activeEffectInput, double phaseCurrent1,
-                          double phaseCurrent2, double phaseCurrent3)
-        {
-            Id = id;
-            ResourceId = resourceId;
-            AtDateTime = atDateTime;
-            ActiveEnergyOutlet = activeEnergyOutlet;
-            ActiveEffectOutlet = activeEffectOutlet;
-            ActiveEnergyInput = activeEnergyInput;
-            ActiveEffectInput = activeEffectInput;
-            PhaseCurrent1 = phaseCurrent1;
-            PhaseCurrent2 = phaseCurrent2;
-            PhaseCurrent3 = phaseCurrent3;
-        }
+        //public EnergyData(int id, int resourceId, DateTime atDateTime, double activeEnergyOutlet, double activeEffectOutlet,
+        //                  double activeEnergyInput, double activeEffectInput, double phaseCurrent1,
+        //                  double phaseCurrent2, double phaseCurrent3)
+        //{
+        //    Id = id;
+        //    ResourceId = resourceId;
+        //    AtDateTime = atDateTime;
+        //    ActiveEnergyOutlet = activeEnergyOutlet;
+        //    ActiveEffectOutlet = activeEffectOutlet;
+        //    ActiveEnergyInput = activeEnergyInput;
+        //    ActiveEffectInput = activeEffectInput;
+        //    PhaseCurrent1 = phaseCurrent1;
+        //    PhaseCurrent2 = phaseCurrent2;
+        //    PhaseCurrent3 = phaseCurrent3;
+        //}
     }
+}
