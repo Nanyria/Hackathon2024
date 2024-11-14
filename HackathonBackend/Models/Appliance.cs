@@ -14,3 +14,4 @@ namespace HackathonBackend.Models
         public bool IsSchedulable { get; set; } = false;
     }
 }
+

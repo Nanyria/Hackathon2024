@@ -24,7 +24,7 @@ namespace HackathonBackend.Data
                 new Appliance { ApplianceId = 13, Name = "Washing machine", IsSchedulable = true },
                 new Appliance { ApplianceId = 14, Name = "Tumble dryer", IsSchedulable = true },
                 new Appliance { ApplianceId = 15, Name = "Drying cabinet", IsSchedulable = true },
-                new Appliance { ApplianceId = 16, Name = "TVs", IsSchedulable = true },
+                new Appliance { ApplianceId = 16, Name = "TVs", IsSchedulable = false },
                 new Appliance { ApplianceId = 17, Name = "Desktop computer", IsSchedulable = false },
                 new Appliance { ApplianceId = 18, Name = "Laptop", IsSchedulable = false },
                 new Appliance { ApplianceId = 19, Name = "Game consoles", IsSchedulable = false },
