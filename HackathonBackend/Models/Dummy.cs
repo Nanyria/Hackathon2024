@@ -6,7 +6,7 @@ namespace HackathonBackend.Models
         public static List<EnergyProfile> DummyEnergyProfiles()
         {
             // Fetch the list of appliances
-            var appliances = ApplianceData.GetAppliances();
+            var appliances = Data.ApplianceData.GetAppliances();
 
             // List of different EnergyProfiles, each with manually selected ApplianceIds
             var energyProfiles = new List<EnergyProfile>
