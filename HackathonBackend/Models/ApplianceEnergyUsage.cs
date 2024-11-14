@@ -6,5 +6,7 @@
         public double EnergyUsage { get; set; }
         public int ApplianceId { get; set; }
         public Appliance? Appliance { get; set; }
+        // New Tag property to indicate high or low energy usage. For recommendation purposes.
+        public string Tag { get; set; } = "High";
     }
 }
