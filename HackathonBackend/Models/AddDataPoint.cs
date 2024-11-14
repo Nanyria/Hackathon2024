@@ -6,16 +6,16 @@ using System.Linq;
 
 public class EnergyMonitor
 {
-    private readonly List<UserInfo> _dataPoints;
+    private readonly List<EnergyCheck> _dataPoints;
     private bool _isAboveThreshold; // Tracks if the last point was above the threshold
 
     public EnergyMonitor()
     {
-        _dataPoints = new List<UserInfo>();
+        _dataPoints = new List<EnergyCheck>();
         _isAboveThreshold = false; // Initialize as not above threshold
     }
 
-    public void AddDataPoint(UserInfo dataPoint)
+    public void AddDataPoint(EnergyCheck dataPoint)
     {
         _dataPoints.Add(dataPoint);
         double average = CalculateAverageActiveEnergyOutlet();
@@ -44,7 +44,7 @@ public class EnergyMonitor
         return _dataPoints.Average(dp => dp.ActiveEnergyOutlet);
     }
 
-    private void NotifyAboveThreshold(UserInfo dataPoint)
+    private void NotifyAboveThreshold(EnergyCheck dataPoint)
     {
         // Logic to send a notification or update a graph
         Console.WriteLine($"Alert: ActiveEnergyOutlet is 10% above average! Value: {dataPoint.ActiveEnergyOutlet} at {dataPoint.AtDateTime}");

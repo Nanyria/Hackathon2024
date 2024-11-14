@@ -7,14 +7,12 @@ namespace HackathonBackend.Models
     public class User
     {
         [Key]
-        public int Id { get; set; }
         public int UserId { get; set; } 
         [Required]
         public string Name { get; set; }
         [Required]
         public string Address { get; set; }
         [Required]
-        [Phone]
         public string PhoneNumber { get; set; }
 
         // List of checks, renamed to 'EnergyAssessments' for clarity
