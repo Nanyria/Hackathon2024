@@ -7,8 +7,7 @@ namespace HackathonBackend.Models
         [Key]   
         public int ApplianceId { get; set; }
         public string Name { get; set; }
-        public List<ApplianceEnergyUsage> energyUsages { get; set; }
-        public int EnergyProfileId { get; set; }
-        public EnergyProfile EnergyProfile { get; set; }
+        public List <EnergyProfile> EnergyProfiles { get; set; } = new List<EnergyProfile>();
+        public bool IsScheduable { get; set; }
     }
 }
