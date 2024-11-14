@@ -1,13 +1,12 @@
 ﻿namespace HackathonBackend.Models
 {
-    public class ApplianceEnergyUsage
+    public class DateAndEnergyUse
     {
-        public int ApplianceEnergyUsageId { get; set; }
+        public int DateAndEnergyUseId { get; set; }
         public double EnergyUsage { get; set; }
-        public int ApplianceId { get; set; }
-        public Appliance? Appliance { get; set; }
+        public DateTime Date { get; set; }
+        public int EnergyProfileId { get; set; }
+        public EnergyProfile EnergyProfile { get; set; }
         // Indicate appliance energy usage for recommendation purposes.
-        public bool IsHighEnergy { get; set; } = false;
-
     }
 }
