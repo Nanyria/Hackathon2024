@@ -7,10 +7,7 @@ namespace HackathonBackend.Models
         [Key]   
         public int ApplianceId { get; set; }
         public string Name { get; set; }
-        public List<ApplianceEnergyUsage> energyUsages { get; set; }
-        public int EnergyProfileId { get; set; }
-        public EnergyProfile EnergyProfile { get; set; }
-        // New Tag property to indicate high or low energy usage. For recommendation purposes.
-        public string Tag { get; set; } = "High";
+        public List <EnergyProfile> EnergyProfiles { get; set; } = new List<EnergyProfile>();
+        public bool IsScheduable { get; set; }
     }
 }
