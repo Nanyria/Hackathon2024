@@ -10,7 +10,7 @@ namespace HackathonBackend.Models
         public List<DateAndEnergyUse> DateAndEnergyUses { get; set; } = new List<DateAndEnergyUse>();
 
         public int UserInfoId { get; set; }
-        public UserInfo UserInfo { get; set; }
+        public User User { get; set; }
         public List<Appliance> Appliances { get; set; } = new List<Appliance>();
 
     }
